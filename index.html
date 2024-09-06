@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/card.css" />
+    <link rel="stylesheet" href="/assets/styles/pagination.css" />
+
+    <title>Rick and Morty Collection</title>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <img src="assets/images/logo.png" alt="" />
+
+        <div style="display: flex; align-items: center">
+          <button id="themeToggle">
+            <span
+              style="color: var(--color-white)"
+              class="material-symbols-outlined dark-icon"
+            >
+              dark_mode
+            </span>
+
+            <span
+              style="color: var(--color-white)"
+              class="material-symbols-outlined light-icon"
+            >
+              light_mode
+            </span>
+          </button>
+        </div>
+      </header>
+
+      <img class="logo" src="assets/images/logo.png" alt="logo" />
+      <div class="search-container">
+        <div class="search-bar">
+          <input
+            class="search-bar-input"
+            placeholder="Character name..."
+            type="text"
+          />
+
+          <button
+            class="clear-input-buttom"
+            style="
+              all: unset;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            "
+          >
+            <span
+              style="color: var(--color-secondary); font-size: 20px"
+              class="material-symbols-outlined close-icon"
+            >
+              close
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="character-not-found">
+        <span style="color: var(--color-text-primary); font-size: 20px">
+          Character not found!
+        </span>
+        <span
+          style="color: var(--color-text-primary); font-size: 60px"
+          class="material-symbols-outlined"
+        >
+          error
+        </span>
+      </div>
+      <section class="characters-list">
+        <div class="character-div">
+          <div class="character-info">
+            <h2 class="character-name">Rick Sanchez</h2>
+            <p class="character-label">
+              Species: <span class="character-value">Human</span>
+            </p>
+            <p class="character-label">
+              Status: <span class="character-value">Alive</span>
+            </p>
+
+            <div class="separator"></div>
+
+            <p class="character-label">
+              Origin: <br /><span class="character-value">Alive</span>
+            </p>
+            <p class="character-label">
+              Last known location: <br />
+              <span class="character-value">Alive</span>
+            </p>
+          </div>
+          <img
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            class="character-image"
+          />
+        </div>
+      </section>
+
+      <div class="pagination-control">
+        <button class="pagination-buttom first-page-buttom">
+          <span
+            style="color: var(--color-white); font-size: 20px"
+            class="material-symbols-outlined"
+          >
+            first_page
+          </span>
+        </button>
+
+        <button class="pagination-buttom prev-page-buttom">
+          <span
+            style="color: var(--color-white); font-size: 20px"
+            class="material-symbols-outlined"
+          >
+            chevron_left
+          </span>
+        </button>
+
+        <span class="page-count">1 de 10</span>
+
+        <button class="pagination-buttom next-page-buttom">
+          <span
+            style="color: var(--color-white); font-size: 20px"
+            class="material-symbols-outlined"
+          >
+            chevron_right
+          </span>
+        </button>
+
+        <button class="pagination-buttom last-page-buttom">
+          <span
+            style="color: var(--color-white); font-size: 20px"
+            class="material-symbols-outlined"
+          >
+            last_page
+          </span>
+        </button>
+      </div>
+
+      <footer>
+        <span>
+          <> By <span></span>
+          <a
+            style="color: var(--color-accent-secondary)"
+            href="https://github.com/renan-gimenez"
+            target="_blank"
+          >
+            Renan Gimenez
+          </a>
+        </span>
+        <span>
+          © 2024 - Rick and Morty Collection. Todos os direitos reservados.
+        </span>
+      </footer>
+    </div>
+
+    <div class="scroll-to-top">
+      <span
+        style="color: var(--color-white); font-size: 28px"
+        class="material-symbols-outlined"
+      >
+        arrow_upward
+      </span>
+    </div>
+
+    <script src="/assets/scripts/data.js"></script>
+    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/pagination.js"></script>
+  </body>
+</html>
