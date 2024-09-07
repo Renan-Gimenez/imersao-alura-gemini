@@ -1,8 +1,16 @@
 const notFound = document.querySelector(".character-not-found");
 const paginationControl = document.querySelector(".pagination-control");
+const charactersList = document.querySelector(".characters-list");
+
+const loadingIcon = document.querySelector(".loading-container");
 
 const fetchCharacters = async (inputValue, currentPage) => {
   try {
+    loadingIcon.style.display = "flex";
+    notFound.style.display = "none";
+    charactersList.style.display = "none";
+    paginationControl.style.display = "none";
+
     const URL =
       inputValue.trim() === ""
         ? `https://rickandmortyapi.com/api/character?page=${currentPage}`
@@ -15,7 +23,7 @@ const fetchCharacters = async (inputValue, currentPage) => {
 
     const rawCharacters = data.results;
 
-    notFound.style.display = "none";
+    charactersList.style.display = "flex";
     paginationControl.style.display = "flex";
 
     const filteredCharacters = rawCharacters.map((item) => {
@@ -38,5 +46,7 @@ const fetchCharacters = async (inputValue, currentPage) => {
     paginationControl.style.display = "none";
 
     console.log("Erro ao filtrar usuário");
+  } finally {
+    loadingIcon.style.display = "none";
   }
 };
