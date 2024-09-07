@@ -1,0 +1,12 @@
+header div a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+
+  padding: 0 20px;
+
+  transition: 200ms;
+}
+
+header div a:hover {
+  color: var(--color-accent);
+}
