@@ -1,3 +1,11 @@
+<!-- MARCO AURELIO, MARIO LUCIO, BRUNO HENRIQUE, LIPEXLS, RICARDO JULIO GONZAGA -->
+
+<!-- 
+  [x] Limpar Input ao clicar no X
+  [x] Ocultar paginação se não encontrar nenhum personagem
+  [ ] Responsividade
+-->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -20,29 +28,32 @@
   <body>
     <div id="root">
       <header>
-        <img src="assets/images/logo.png" alt="" />
-
         <div>
+          <img src="assets/images/logo.png" alt="" class="logo" />
+        </div>
+
+        <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
         </div>
 
-        <div style="display: flex; align-items: center">
-          <button id="themeToggle">
-            <span
-              style="color: var(--color-white)"
-              class="material-symbols-outlined dark-icon"
-            >
-              dark_mode
-            </span>
-
-            <span
-              style="color: var(--color-white)"
-              class="material-symbols-outlined light-icon"
-            >
-              light_mode
-            </span>
-          </button>
+        <div>
+          <div class="theme-toggle">
+            <button id="themeToggle">
+              <span
+                style="color: var(--color-white)"
+                class="material-symbols-outlined dark-icon"
+              >
+                dark_mode
+              </span>
+              <span
+                style="color: var(--color-white)"
+                class="material-symbols-outlined light-icon"
+              >
+                light_mode
+              </span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -77,7 +88,7 @@
       </div>
 
       <!-- NOT FOUND -->
-      <div class="character-not-found">
+      <!-- <div class="character-not-found">
         <span style="color: var(--color-text-primary); font-size: 20px">
           Character not found!
         </span>
@@ -87,20 +98,21 @@
         >
           error
         </span>
-      </div>
+      </div> -->
 
       <!-- LOADING -->
-      <div class="loading-container">
+      <!-- <div class="loading-container">
         <span
           style="color: var(--color-white)"
           class="material-symbols-outlined loading-icon"
         >
           progress_activity
         </span>
-      </div>
+      </div> -->
 
       <!-- CHARACTERS LIST -->
       <section class="characters-list">
+        <!-- TEMPLATE -->
         <div class="character-div">
           <div class="character-info">
             <h2 class="character-name">Rick Sanchez</h2>
@@ -129,7 +141,11 @@
       </section>
 
       <div class="pagination-control">
-        <button class="pagination-buttom first-page-buttom">
+        <button
+          class="pagination-buttom first-page-buttom"
+          id="firstPageBtn"
+          disabled
+        >
           <span
             style="color: var(--color-white); font-size: 20px"
             class="material-symbols-outlined"
@@ -138,7 +154,11 @@
           </span>
         </button>
 
-        <button class="pagination-buttom prev-page-buttom">
+        <button
+          class="pagination-buttom prev-page-buttom"
+          id="prevPageBtn"
+          disabled
+        >
           <span
             style="color: var(--color-white); font-size: 20px"
             class="material-symbols-outlined"
@@ -149,7 +169,7 @@
 
         <span class="page-count">1 de 10</span>
 
-        <button class="pagination-buttom next-page-buttom">
+        <button class="pagination-buttom next-page-buttom" id="nextPageBtn">
           <span
             style="color: var(--color-white); font-size: 20px"
             class="material-symbols-outlined"
@@ -158,7 +178,7 @@
           </span>
         </button>
 
-        <button class="pagination-buttom last-page-buttom">
+        <button class="pagination-buttom last-page-buttom" id="lastPageBtn">
           <span
             style="color: var(--color-white); font-size: 20px"
             class="material-symbols-outlined"
@@ -180,22 +200,35 @@
           </a>
         </span>
         <span>
-          © 2024 - Rick and Morty Collection. Todos os direitos reservados.
+          <!-- © 2024 - Rick and Morty Collection. Todos os direitos reservados. -->
+          © 2024 - Rick and Morty Collection. All rights reserved.
         </span>
       </footer>
     </div>
 
-    <div class="scroll-to-top">
+    <!-- <div class="scroll-to-top">
       <span
         style="color: var(--color-white); font-size: 28px"
         class="material-symbols-outlined"
       >
         arrow_upward
       </span>
+    </div> -->
+
+    <div class="scroll-to-top" id="scrollToTopBtn">
+      <span
+        style="color: var(--color-white); font-size: 28px"
+        class="material-symbols-outlined"
+        >arrow_upward</span
+      >
     </div>
 
-    <script src="/assets/scripts/data.js"></script>
-    <script src="/assets/scripts/script.js"></script>
-    <script src="/assets/scripts/pagination.js"></script>
+    <!-- <script src="/assets/scripts/data.js"></script> -->
+    <!-- <script src="/assets/scripts/script.js"></script> -->
+    <!-- <script src="/assets/scripts/pagination.js"></script> -->
+
+    <script src="/assets/scripts/staticDataRaw.js"></script>
+    <script src="/assets/scripts/scrollToTop.js"></script>
+    <script src="/assets/scripts/themeToggle.js"></script>
   </body>
 </html>

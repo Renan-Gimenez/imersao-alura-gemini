@@ -17,6 +17,11 @@
   cursor: pointer;
 }
 
+.pagination-buttom:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .pagination-control {
   display: flex;
   /* display: none; */
@@ -26,7 +31,8 @@
 }
 
 .pagination-control span {
-  color: var(--color-white);
+  color: var(--color-text-primary);
+  /* color: var(--color-white); */
 }
 
 .scroll-to-top {
@@ -50,5 +56,9 @@
   cursor: pointer;
   z-index: 1000;
 
-  transition: 200ms;
+  transition: ease-in-out 0.2s;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--color-accent);
 }

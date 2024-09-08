@@ -104,32 +104,6 @@ img {
   /* filter: drop-shadow(5px 5px 5px #222); */
 }
 
-header {
-  height: 64px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  z-index: 99;
-
-  padding: 0 5%;
-
-  top: 0;
-  position: fixed;
-
-  /* background-color: #27282e; */
-  /* opacity: 0.7; */
-  background-color: rgba(39, 40, 46, 0.7);
-
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); */
-
-  border-bottom: 1px solid #777;
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
 .character-not-found {
   height: 200px;
 
@@ -138,11 +112,6 @@ header {
   align-items: center;
   justify-content: center;
   gap: 16px;
-}
-
-header img {
-  height: 64px;
-  width: auto;
 }
 
 .search-container {

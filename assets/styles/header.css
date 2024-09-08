@@ -1,12 +1,58 @@
-header div a {
+header {
+  height: 64px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Define três colunas: logo, navegação e botão de tema */
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 0 5%; /* Espaçamento interno */
+  background-color: rgba(39, 40, 46, 0.7); /* Cor de fundo com transparência */
+  border-bottom: 1px solid #777; /* Borda inferior */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+header div:nth-of-type(1) {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: red; */
+}
+
+header img {
+  height: 64px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* Centraliza os links dentro da célula da grade */
+}
+
+.nav-links a {
   text-decoration: none;
-  color: var(--color-text-primary);
-
+  /* color: var(--color-text-primary); */
+  color: var(--color-white);
   padding: 0 20px;
-
   transition: 200ms;
 }
 
-header div a:hover {
+.nav-links a:hover {
   color: var(--color-accent);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle #themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
